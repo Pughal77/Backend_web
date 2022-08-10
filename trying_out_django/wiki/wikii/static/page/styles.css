@@ -1,0 +1,36 @@
+input[type=submit] {
+  background-color: lightcoral;
+}
+
+input[type=submit]:hover {
+  background-color: lightseagreen;
+}
+
+input[type=text]:focus {
+  border: 5px solid black;
+}
+
+a {
+  color: hotpink;
+}
+
+a:hover {
+  color: indigo;
+}
+
+a:visited {
+  color: lawngreen;
+}
+
+h1 {
+  color: blueviolet;
+}
+
+div {
+  border: solid blue;
+}
+
+div h1 {
+  color: chocolate;
+}
+/*# sourceMappingURL=styles.css.map */

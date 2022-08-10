@@ -1,0 +1,31 @@
+{% extends 'pages/origin.html' %}
+{% block body %}
+<div>
+    <h1>{{ title }}</h1>
+    {{ entry }}
+</div>
+<a href="{% url 'wikii:home' %}">Click me to go back home</a>
+<a href="{% url 'wikii:edit' pk %}">Click me to edit ur article</a>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+<!--<form action="{% url 'wikii:article' %}" method="post">
+    <input type="text" id="list" placeholder="Write name of article" style="text-align: right;">
+    <ol id="list" style="text-align: right;">
+        {% for title in list %}
+        <li>{{ title }}</li>
+        {% endfor %}
+    </ol>
+    <input type="submit" style="text-align: right;">
+</form>
+-->

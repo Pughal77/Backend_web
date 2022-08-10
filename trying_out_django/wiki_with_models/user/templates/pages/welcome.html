@@ -1,0 +1,6 @@
+{% extends 'pages/template.html' %}
+{% block body %}
+<h1>Welcome</h1>
+<a href="{% url 'user:login' %}">Login Page</a><br>
+<a href="{% url 'user:create_user' %}">Click me to create account</a>
+{% endblock %}

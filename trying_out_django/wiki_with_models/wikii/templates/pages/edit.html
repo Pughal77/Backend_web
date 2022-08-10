@@ -1,0 +1,15 @@
+{% extends 'pages/origin.html' %}
+{% block body %}
+{% if edit_auth %}
+<h1>EDIT ENTRY</h1>
+<form action="{% url 'wikii:edit' id %}" method="post">
+    {% csrf_token %}
+    {{ edit_entry }}
+    <input type="submit"style="text-align: left;">
+</form>
+{% else %}
+this is not ur aticle.pleaase contact authir id if u dont like it
+{% endif %}
+<a href="{% url 'wikki:home' %">Click me to go back home</a>
+
+{% endblock %}

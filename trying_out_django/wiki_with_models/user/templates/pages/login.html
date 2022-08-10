@@ -1,0 +1,13 @@
+{% extends 'pages/template.html' %}
+{% block body %}
+<h1>login</h1>
+{% if invalid_user %}
+invalid user credentials
+<a href="{% url 'user:create_user' %}">New user? CLick me to create a account</a>
+{% endif %}
+<form action="{% url 'user:login' %}" method="post">
+    {% csrf_token %}
+    {{ login_form }}
+    <input type="submit">
+</form>
+{% endblock %}

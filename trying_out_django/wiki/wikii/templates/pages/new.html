@@ -1,0 +1,14 @@
+{% extends 'pages/origin.html' %}
+{% block body %}
+<h1>NEW ENTRY</h1>
+<form action="{% url 'wikii:new' %}" method="post">
+    {% csrf_token %}
+    {{ new_entry }}
+    <input type="submit"style="text-align: left;">
+</form>
+
+
+<a href="{% url 'wikki:home' %">Click me to go back home</a>
+
+{% endblock %}
+

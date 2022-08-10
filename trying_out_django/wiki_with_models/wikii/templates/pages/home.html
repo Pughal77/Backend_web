@@ -1,0 +1,24 @@
+{% extends 'pages/origin.html' %}
+{% block body %}
+<div>
+    <h1>articles by the community</h1>
+    <ol>
+        {% for obj in community_list %}
+        <li><a href="{% url 'wikii:article' obj.pk %}">{{ obj.title }}</a></li>
+        {% empty %}
+        no articles...
+        {% endfor %}
+    </ol>
+</div><br><br>
+<div>
+    <h1>Your articles</h1>
+    <ol>
+        {% for num in user_list %}
+        <li><a href="{% url 'wikii:article' obj.pk %}">{{ obj.title }}</a></li>
+        {% empty %}
+        no articles...
+        {% endfor %}
+    </ol>
+</div><br><br>
+<a href="{% url 'wikii:new' %}">Click me to create a  new article</a>
+{% endblock %}

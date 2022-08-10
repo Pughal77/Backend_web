@@ -1,0 +1,10 @@
+{% extends 'pages/template.html' %}
+{% block body %}
+<h1>New user.</h1>
+<form action="{% url 'user:create_user' %}" method="post">
+    {% csrf_token %}
+    {{ create_user }} <br>
+    <input type="submit">
+</form>
+<a href="{% url 'user:welcome' %}">click me to go back home</a>
+{% endblock %}
